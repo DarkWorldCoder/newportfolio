@@ -42,7 +42,7 @@ const Hero = () => {
       {/* Meteors Effect */}
       <Meteors number={10} />
 
-      <div className="container relative z-20 mx-auto mb-24 flex w-full flex-col items-center justify-center gap-y-8 px-4">
+      <div className="container relative z-20 mx-auto mb-40 flex w-full flex-col items-center justify-center gap-y-4 px-4">
         {/* Status & Location - Top Placement */}
         <div className="flex items-center justify-center gap-3 text-xs font-medium text-zinc-500 dark:text-zinc-400 animate-fadeInUp">
            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100/50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 backdrop-blur-md">
@@ -143,7 +143,7 @@ const Hero = () => {
           <div className="absolute bottom-0 left-1/2 z-0 -translate-x-1/2 transform h-[500px] w-[1200px] mask-[linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
             {/* Animated Gradient - The "Live" Light */}
             <div
-              className="absolute bottom-[167px] left-1/2 -translate-x-1/2 transform h-[111px] w-[800px] blur-[80px] bg-[linear-gradient(90deg,#06b6d4,#7c3aed,#4f46e5,#38bdf8,#06b6d4)] bg-size-[300%_100%] animate-gradient"
+              className="absolute bottom-[120px] left-1/2 -translate-x-1/2 transform h-[90px] w-[500px] blur-[50px] bg-[linear-gradient(90deg,#a5f3fc,#c4b5fd,#a5b4fc,#7dd3fc,#a5f3fc)] bg-size-[300%_100%] animate-gradient"
               style={{
                 transform: "translateX(-2.56323px) scaleX(1.09744)",
                 backgroundPosition: "48.7184% 50%",
@@ -156,7 +156,7 @@ const Hero = () => {
                 background="transparent"
                 minSize={1}
                 maxSize={3}
-                particleDensity={50}
+                particleDensity={30}
                 className="w-full h-full"
                 particleColor="#ffffff"
                 speed={2}
