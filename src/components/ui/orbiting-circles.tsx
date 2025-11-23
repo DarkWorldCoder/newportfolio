@@ -1,32 +1,24 @@
-import React from "react"
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
-
-export interface OrbitingCirclesProps
-  extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string
-  children?: React.ReactNode
-  reverse?: boolean
-  duration?: number
-  delay?: number
-  radius?: number
-  path?: boolean
-  iconSize?: number
-  speed?: number
+export interface OrbitingCirclesProps {
+  className?: string;
+  children?: React.ReactNode;
+  reverse?: boolean;
+  duration?: number;
+  delay?: number;
+  radius?: number;
+  path?: boolean;
 }
 
-export function OrbitingCircles({
+export default function OrbitingCircles({
   className,
   children,
   reverse,
   duration = 20,
-  radius = 160,
+  delay = 10,
+  radius = 50,
   path = true,
-  iconSize = 30,
-  speed = 1,
-  ...props
 }: OrbitingCirclesProps) {
-  const calculatedDuration = duration / speed
   return (
     <>
       {path && (
@@ -36,7 +28,7 @@ export function OrbitingCircles({
           className="pointer-events-none absolute inset-0 size-full"
         >
           <circle
-            className="stroke-black/10 stroke-1 dark:stroke-white/10"
+            className="stroke-white/10 stroke-1 dark:stroke-white/10"
             cx="50%"
             cy="50%"
             r={radius}
@@ -44,29 +36,23 @@ export function OrbitingCircles({
           />
         </svg>
       )}
-      {React.Children.map(children, (child, index) => {
-        const angle = (360 / React.Children.count(children)) * index
-        return (
-          <div
-            style={
-              {
-                "--duration": calculatedDuration,
-                "--radius": radius,
-                "--angle": angle,
-                "--icon-size": `${iconSize}px`,
-              } as React.CSSProperties
-            }
-            className={cn(
-              `animate-orbit absolute flex size-[var(--icon-size)] transform-gpu items-center justify-center rounded-full`,
-              { "[animation-direction:reverse]": reverse },
-              className
-            )}
-            {...props}
-          >
-            {child}
-          </div>
-        )
-      })}
+
+      <div
+        style={
+          {
+            "--duration": duration,
+            "--radius": radius,
+            "--delay": -delay,
+          } as React.CSSProperties
+        }
+        className={cn(
+          "absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",
+          { "[animation-direction:reverse]": reverse },
+          className,
+        )}
+      >
+        {children}
+      </div>
     </>
-  )
+  );
 }

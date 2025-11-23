@@ -45,16 +45,16 @@ const Hero = () => {
       <div className="container relative z-20 mx-auto mb-40 flex w-full flex-col items-center justify-center gap-y-4 px-4">
         {/* Status & Location - Top Placement */}
         <div className="flex items-center justify-center gap-3 text-xs font-medium text-zinc-500 dark:text-zinc-400 animate-fadeInUp">
-           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100/50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500/80"></span>
-              </span>
-              Available for work
-           </div>
-           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100/50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 backdrop-blur-md">
-              <MapPin className="h-3 w-3" />
-              Based in Nepal
-           </div>
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100/50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500/80"></span>
+            </span>
+            Available for work
+          </div>
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-100/50 dark:bg-zinc-800/50 border border-zinc-200/50 dark:border-zinc-700/50 backdrop-blur-md">
+            <MapPin className="h-3 w-3" />
+            Based in Nepal
+          </div>
         </div>
 
         {/* Coming Soon Badge */}
@@ -98,7 +98,7 @@ const Hero = () => {
           <div className="leading-relaxed inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
             <span>I&apos;m</span>
             <div className="relative h-9 w-24 overflow-hidden rounded-full border border-zinc-200 dark:border-zinc-700 shadow-sm inline-block align-middle group">
-               <Image
+              <Image
                 alt="Ayush Niroula"
                 width={100}
                 height={100}
@@ -107,7 +107,17 @@ const Hero = () => {
               />
             </div>
             <span className="font-semibold text-black dark:text-white">Ayush Niroula</span>.
-            <span>A Lead Full Stack Engineer architecting <span className="font-semibold text-zinc-900 dark:text-zinc-100 decoration-blue-500/40 underline decoration-2 underline-offset-4 hover:decoration-blue-500 transition-all duration-300">scalable systems</span> and designing <span className="font-semibold text-zinc-900 dark:text-zinc-100 decoration-purple-500/40 underline decoration-2 underline-offset-4 hover:decoration-purple-500 transition-all duration-300">intelligent solutions</span> that drive innovation.</span>
+            <span>
+              <a
+                href="https://eterosoft.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-zinc-900 dark:text-zinc-100 decoration-indigo-500/40 underline decoration-2 underline-offset-4 hover:decoration-indigo-500 transition-all duration-300"
+              >
+                CEO at Eterosoft
+              </a>
+              {" "}& Lead Full Stack Engineer architecting <span className="font-semibold text-zinc-900 dark:text-zinc-100 decoration-blue-500/40 underline decoration-2 underline-offset-4 hover:decoration-blue-500 transition-all duration-300">scalable systems</span> and designing <span className="font-semibold text-zinc-900 dark:text-zinc-100 decoration-purple-500/40 underline decoration-2 underline-offset-4 hover:decoration-purple-500 transition-all duration-300">intelligent solutions</span> that drive innovation.
+            </span>
           </div>
         </div>
 
@@ -151,7 +161,7 @@ const Hero = () => {
             ></div>
             {/* Atmosphere Particles */}
             <div className="absolute bottom-0 left-0 w-full h-full z-20 opacity-50">
-               <SparklesCore
+              <SparklesCore
                 id="earth-particles"
                 background="transparent"
                 minSize={1}
