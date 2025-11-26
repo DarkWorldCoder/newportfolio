@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import { BentoGridSection } from "@/components/BentoGridSection";
+import { FeaturedWork } from "@/components/FeaturedWork";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
           <Hero />
         </div>
         <BentoGridSection />
+        <FeaturedWork />
       </div>
     </main>
   );
