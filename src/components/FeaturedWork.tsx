@@ -13,7 +13,7 @@ import {
     Cpu,
     Zap
 } from "lucide-react";
-import { CardStackScroll } from "./ui/card-stack-scroll";
+import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import { useScroll } from "framer-motion";
 
 const WiseAdmitMock = () => (
@@ -195,7 +195,7 @@ export function FeaturedWork() {
                 </p>
             </div>
 
-            <CardStackScroll projects={projects} />
+            <StickyScroll content={projects} />
 
             <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
             <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />

@@ -17,7 +17,7 @@ export const CustomCursor = ({ isHovering }: { isHovering: boolean }) => {
 
     if (!isHovering) return null;
 
-    const text = "VIEW DETAILS     ·     VIEW DETAILS     ·     ";
+    const text = "VIEW DETAILS     ·     VIEW DETAILS     ·      VIEW DETAILS     ·  ";
 
     return (
         <motion.div
